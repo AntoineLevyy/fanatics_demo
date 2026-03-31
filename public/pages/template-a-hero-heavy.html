@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/pages/nb-shared.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ── Template A: Hero Heavy ── */
+  /* Full-viewport hero, transparent overlaid header, editorial feel, whitespace-rich */
+
+  [data-nb-space] { position: relative; }
+  [data-nb-space]::after {
+    content: 'Space: ' attr(data-nb-space);
+    position: absolute; top: 2px; right: 4px;
+    font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    background: #1A52F0; color: #fff; padding: 2px 6px; border-radius: 3px;
+    opacity: 0; transition: opacity 0.2s; pointer-events: none; z-index: 10;
+  }
+  [data-nb-space]:hover::after { opacity: 1; }
+
+  .tpl-label {
+    position: fixed; bottom: 16px; right: 16px; background: #1A52F0; color: #fff;
+    padding: 8px 14px; border-radius: 6px; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.05em; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .tpl-label span { opacity: 0.7; font-weight: 400; }
+
+  /* ── Full-viewport hero ── */
+  .tpl-a-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    background: #000;
+  }
+  .tpl-a-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    opacity: 0.6;
+  }
+
+  /* Transparent header overlaid on the hero */
+  .tpl-a-header {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 64px;
+  }
+  .tpl-a-header-nav {
+    display: flex; align-items: center; gap: 28px;
+    font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500;
+  }
+  .tpl-a-header-nav span { cursor: pointer; }
+  .tpl-a-header-nav span:hover { color: #fff; }
+
+  /* Top banner — slim strip above the hero */
+  .tpl-a-top-banner {
+    background: #000; color: rgba(255,255,255,0.8); text-align: center;
+    padding: 8px 16px; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+  .tpl-a-top-banner strong { color: #fff; font-weight: 700; }
+
+  /* Hero content — centred, large typography */
+  .tpl-a-hero-content {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 0 48px;
+  }
+  .tpl-a-hero-eyebrow {
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.2em; color: rgba(255,255,255,0.5); margin-bottom: 12px;
+  }
+  .tpl-a-hero-headline {
+    font-size: 56px; font-weight: 800; color: #fff; line-height: 1.05;
+    margin-bottom: 16px; max-width: 700px;
+  }
+  .tpl-a-hero-sub {
+    font-size: 18px; color: rgba(255,255,255,0.65); margin-bottom: 32px;
+    max-width: 500px; line-height: 1.5;
+  }
+  .tpl-a-hero-cta {
+    display: inline-block; padding: 16px 40px; background: #fff; color: #111;
+    border: none; border-radius: 8px; font-size: 16px; font-weight: 700;
+    cursor: pointer; font-family: inherit; transition: all 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .tpl-a-hero-cta:hover { background: #f0f0f0; transform: translateY(-1px); }
+
+  /* Scroll hint */
+  .tpl-a-scroll-hint {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,0.4); font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.15em;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .tpl-a-scroll-arrow {
+    width: 20px; height: 20px; border-right: 2px solid rgba(255,255,255,0.4);
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    transform: rotate(45deg); animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: rotate(45deg) translateY(0); }
+    50% { transform: rotate(45deg) translateY(6px); }
+  }
+
+  /* ── Spacious PDP ── */
+  .tpl-a-pdp-wrap {
+    max-width: 1200px; margin: 0 auto; padding: 60px 48px;
+  }
+
+  /* Override shared PDP styles for more whitespace */
+  .tpl-a-pdp-wrap .nb-pdp { padding: 0; max-width: none; }
+  .tpl-a-pdp-wrap .nb-pdp-images { padding: 0 48px 0 0; }
+  .tpl-a-pdp-wrap .nb-pdp-info { padding: 0 0 0 48px; width: 460px; }
+
+  /* ── Minimal section divider ── */
+  .tpl-a-divider {
+    max-width: 1200px; margin: 0 auto; padding: 0 48px;
+  }
+  .tpl-a-divider-line {
+    height: 1px; background: #eee;
+  }
+
+  /* ── Airy grid section ── */
+  .tpl-a-grid-section {
+    max-width: 1200px; margin: 0 auto; padding: 48px 48px;
+  }
+
+  /* ── Minimal single-line trust ── */
+  .tpl-a-trust {
+    display: flex; gap: 40px; justify-content: center;
+    padding: 32px 48px; font-size: 12px; color: #999; font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Clean reviews ── */
+  .tpl-a-reviews {
+    max-width: 1200px; margin: 0 auto; padding: 0 48px 48px;
+  }
+  .tpl-a-review-item {
+    padding: 20px 0; border-bottom: 1px solid #f0f0f0;
+  }
+  .tpl-a-review-item:last-child { border-bottom: none; }
+  .tpl-a-review-stars { color: #111; font-size: 11px; margin-bottom: 6px; letter-spacing: 2px; }
+  .tpl-a-review-text { font-size: 14px; color: #555; line-height: 1.7; font-style: italic; }
+  .tpl-a-review-author { font-size: 11px; color: #aaa; margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<!-- ═══ TEMPLATE A — HERO HEAVY ═══ -->
+<!-- Full-viewport immersive hero. Transparent header. No subnav, no breadcrumb. -->
+<!-- Editorial, magazine-like. Whitespace-rich below. -->
+<!-- Spaces: top-banner, promo-bar, hero-image, hero-headline, hero-subheadline, hero-cta -->
+
+<div class="tpl-label">Template A <span>· Hero Heavy · 6 spaces</span></div>
+
+<!-- ── SPACE: top-banner ── -->
+<div class="tpl-a-top-banner" data-nb-space="top-banner">
+  <strong>FREE SHIPPING</strong> on orders $99+ &nbsp;|&nbsp; <strong>FREE Jersey Assurance</strong> on all jerseys
+</div>
+
+<!-- ══ FULL-VIEWPORT HERO ══ -->
+<div class="tpl-a-hero" data-nb-space="hero-image">
+  <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/Screenshot%202026-03-27%20at%2000.49.42.png" alt="San Francisco Giants Players">
+
+  <!-- Transparent header overlaid on hero -->
+  <div class="tpl-a-header">
+    <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/fanatics.svg" alt="Fanatics" style="height:22px;filter:brightness(0) invert(1)">
+    <div class="tpl-a-header-nav">
+      <span>MLB</span><span>NFL</span><span>NBA</span><span>NHL</span><span>Soccer</span>
+      <span style="font-size:18px">🔍</span><span style="font-size:18px">🛒</span>
+    </div>
+  </div>
+
+  <!-- Hero content — centred -->
+  <div class="tpl-a-hero-content">
+    <div class="tpl-a-hero-eyebrow" data-nb-space="hero-subheadline">San Francisco Giants · Official Nike Jerseys</div>
+    <div class="tpl-a-hero-headline" data-nb-space="hero-headline">Wear What They Wear</div>
+    <div class="tpl-a-hero-sub" data-nb-space="promo-bar">Get the same jerseys the players wear on the field. Officially licensed, shipped free.</div>
+    <button class="tpl-a-hero-cta" data-nb-space="hero-cta">Shop Now</button>
+  </div>
+
+  <div class="tpl-a-scroll-hint">
+    Scroll
+    <div class="tpl-a-scroll-arrow"></div>
+  </div>
+</div>
+
+<!-- ── Spacious PDP — no subnav, no breadcrumb, just product ── -->
+<div class="tpl-a-pdp-wrap">
+  <div class="nb-pdp">
+    <div class="nb-pdp-images">
+      <div class="nb-pdp-main-img">
+        <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/matt_chapman_jersey.jpg?updatedAt=1774568492019" alt="Matt Chapman #26 Home Limited Jersey">
+      </div>
+      <div class="nb-pdp-thumbs">
+        <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/matt_chapman_jersey.jpg?updatedAt=1774568492019" alt="Front" class="active">
+        <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/matt_chapman_cream.png" alt="Alternate">
+        <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/matt_chapman_anthracite.png" alt="City Connect">
+      </div>
+      <div class="nb-nb-badge">Neon Blue</div>
+    </div>
+
+    <div class="nb-pdp-info">
+      <div class="nb-pdp-brand">Nike · San Francisco Giants</div>
+      <div class="nb-pdp-title">Matt Chapman San Francisco Giants Nike Home Limited Player Jersey - Cream</div>
+      <div class="nb-pdp-rating">
+        <span class="stars">★★★★★</span>
+        <span>4.9 (847 reviews)</span>
+      </div>
+      <div class="nb-pdp-price">$174.99</div>
+      <div class="nb-pdp-affirm">or 4 interest-free payments of <strong>$43.75</strong> with Afterpay</div>
+      <div class="nb-pdp-shipping">✓ FREE Shipping &nbsp;|&nbsp; FREE Jersey Assurance</div>
+
+      <div class="nb-pdp-players">
+        <div class="nb-pdp-players-label">Player</div>
+        <div class="nb-pdp-player-chips">
+          <div class="nb-pdp-player-chip active">Matt Chapman #26</div>
+          <div class="nb-pdp-player-chip">Jung Hoo Lee #51</div>
+          <div class="nb-pdp-player-chip">Logan Webb #62</div>
+          <div class="nb-pdp-player-chip">Blank / Custom</div>
+        </div>
+      </div>
+
+      <div class="nb-pdp-size">
+        <div class="nb-pdp-size-header">
+          <div class="nb-pdp-size-label">Size</div>
+          <div class="nb-pdp-size-chart">Size Chart</div>
+        </div>
+        <div class="nb-pdp-sizes">
+          <div class="nb-pdp-size-btn">S</div>
+          <div class="nb-pdp-size-btn active">M</div>
+          <div class="nb-pdp-size-btn">L</div>
+          <div class="nb-pdp-size-btn">XL</div>
+          <div class="nb-pdp-size-btn">2XL</div>
+          <div class="nb-pdp-size-btn">3XL</div>
+        </div>
+      </div>
+
+      <button class="nb-cta-btn">Add to Cart — $174.99</button>
+      <button class="nb-cta-secondary">Compare All Chapman Jerseys</button>
+
+      <div class="nb-pdp-details">
+        <div class="nb-pdp-detail-row"><span>Brand</span><span>Nike</span></div>
+        <div class="nb-pdp-detail-row"><span>Type</span><span>Limited Player Jersey</span></div>
+        <div class="nb-pdp-detail-row"><span>Color</span><span>Cream</span></div>
+        <div class="nb-pdp-detail-row"><span>Material</span><span>100% Polyester</span></div>
+        <div class="nb-pdp-detail-row"><span>Officially Licensed</span><span>MLB · Nike</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Divider ── -->
+<div class="tpl-a-divider"><div class="tpl-a-divider-line"></div></div>
+
+<!-- ── Product Grid — airy ── -->
+<div class="tpl-a-grid-section">
+  <div class="nb-section-title">More Chapman #26 Styles</div>
+  <div class="nb-section-sub" style="margin-bottom:24px">Same player, different looks</div>
+  <div class="nb-grid">
+    <div class="nb-card"><div class="nb-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/matt_chapman_jersey.jpg?updatedAt=1774568492019" alt="Chapman Home Limited" style="width:100%;height:100%;object-fit:contain;padding:8px;background:#f8f8f8"></div><div class="nb-card-body"><div class="nb-card-badge" style="background:#e8f5e9;color:#2e7d32">Home Limited</div><div class="nb-card-name">Matt Chapman Home Limited Jersey - Cream</div><div class="nb-card-price">$174.99</div><div class="nb-card-review">★★★★★ 847 reviews · Ships Free</div></div></div>
+    <div class="nb-card"><div class="nb-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/matt_chapman_anthracite.png" alt="Chapman City Connect" style="width:100%;height:100%;object-fit:contain;padding:8px;background:#f8f8f8"></div><div class="nb-card-body"><div class="nb-card-badge" style="background:#f3e8ff;color:#7c3aed">City Connect</div><div class="nb-card-name">Matt Chapman 2025 City Connect Limited - Anthracite</div><div class="nb-card-price">$174.99</div><div class="nb-card-review">★★★★★ 1,204 reviews · Ships Free</div></div></div>
+    <div class="nb-card"><div class="nb-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/matt_chapman_cream.png" alt="Chapman Home Replica" style="width:100%;height:100%;object-fit:contain;padding:8px;background:#f8f8f8"></div><div class="nb-card-body"><div class="nb-card-badge" style="background:#dbeafe;color:#1d4ed8">Best Value</div><div class="nb-card-name">Matt Chapman Home Replica Jersey - Cream</div><div class="nb-card-price">$149.99</div><div class="nb-card-review">★★★★★ 612 reviews · Ships Free</div></div></div>
+    <div class="nb-card"><div class="nb-card-img"><img src="https://fanatics.frgimages.com/san-francisco-giants/mens-nike-cream-san-francisco-giants-home-replica-team-jersey_pi3588000_ff_3588480-a9a1ed5ae8b0bcaf9ab4_full.jpg?_hv=2" alt="Team Jersey" style="width:100%;height:100%;object-fit:contain;padding:8px;background:#f8f8f8"></div><div class="nb-card-body"><div class="nb-card-badge" style="background:#fff7ed;color:#c2410c">Team</div><div class="nb-card-name">SF Giants Home Replica Team Jersey - Cream</div><div class="nb-card-price">$124.99</div><div class="nb-card-review">★★★★★ 2,847 reviews · Ships Free</div></div></div>
+  </div>
+</div>
+
+<!-- ── Divider ── -->
+<div class="tpl-a-divider"><div class="tpl-a-divider-line"></div></div>
+
+<!-- ── Reviews — clean italic style ── -->
+<div class="tpl-a-reviews">
+  <div class="nb-section-title" style="margin-bottom:16px">What Fans Say</div>
+  <div class="tpl-a-review-item"><div class="tpl-a-review-stars">★★★★★</div><div class="tpl-a-review-text">"Got the Chapman jersey for opening day — the cream color is perfect and the stitching on the numbers is really high quality."</div><div class="tpl-a-review-author">— GiantsForever28, Verified Purchase</div></div>
+  <div class="tpl-a-review-item"><div class="tpl-a-review-stars">★★★★★</div><div class="tpl-a-review-text">"My son is a huge Chapman fan. This was his birthday gift and he hasn't taken it off since. True to size."</div><div class="tpl-a-review-author">— BayAreaMom, Verified Purchase</div></div>
+</div>
+
+<!-- ── Trust — single minimal line ── -->
+<div class="tpl-a-trust">
+  <span>Official MLB Licensed</span>
+  <span>·</span>
+  <span>Free Shipping $99+</span>
+  <span>·</span>
+  <span>365-Day Returns</span>
+  <span>·</span>
+  <span>Secure Checkout</span>
+</div>
+
+<!-- ── Footer (static) ── -->
+<footer class="nb-footer">
+  <div class="nb-footer-main">
+    <div class="nb-footer-columns">
+      <div class="nb-footer-col"><div class="nb-footer-col-title">Customer Service</div><ul><li><a>Contact Us</a></li><li><a>Help</a></li><li><a>Track My Order</a></li><li><a>Shipping</a></li><li><a>Size Chart</a></li><li><a>Gift Cards</a></li></ul></div>
+      <div class="nb-footer-col"><div class="nb-footer-col-title">Worry Free Shopping</div><ul><li><a>Promo Terms and Exclusions</a></li><li><a>365-Day Returns</a></li><li><a>Fanatics MVP</a></li><li><a>FanCash</a></li><li><a>Authenticity Verification</a></li></ul></div>
+      <div class="nb-footer-col"><div class="nb-footer-col-title">Information</div><ul><li><a>About Us</a></li><li><a>Affiliate Program</a></li><li><a>Fanatics App</a></li><li><a>Rewards</a></li><li><a>Careers</a></li></ul></div>
+    </div>
+    <div class="nb-footer-right">
+      <div class="nb-footer-signup"><p>Stay updated on sales, new items and more.</p><button class="nb-footer-signup-btn">SIGN UP & SAVE!</button></div>
+      <div><div class="nb-footer-social-title">Follow Us</div><div class="nb-footer-social"><a>f</a><a>▶</a><a>𝕏</a><a>📷</a><a>📌</a></div></div>
+      <div><div class="nb-footer-app-title">Get the App</div><div class="nb-footer-app-badges"><div class="nb-footer-app-badge">App Store</div><div class="nb-footer-app-badge">Google Play</div></div></div>
+    </div>
+  </div>
+  <div class="nb-footer-bottom">
+    <div class="nb-footer-legal"><a>Privacy Policy</a><a>Do Not Sell / Share My Personal Information</a><a>Accessibility</a><a>Terms of Use</a></div>
+    <div class="nb-footer-copyright">&copy; Fanatics, LLC., 2026. All Rights Reserved.</div>
+  </div>
+</footer>
+</body>
+</html>

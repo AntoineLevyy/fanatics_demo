@@ -1,0 +1,146 @@
+{
+  "templates": {
+    "hero-heavy": {
+      "id": "hero-heavy",
+      "name": "Template A — Hero Heavy",
+      "description": "Full-viewport immersive hero with transparent overlaid header. No subnav, no breadcrumb. Editorial, magazine-like feel with generous whitespace below. All persuasion happens above the fold.",
+      "file": "/pages/template-a-hero-heavy.html",
+      "spaces": {
+        "top-banner": {
+          "type": "text",
+          "selector": "[data-nb-space='top-banner']",
+          "description": "Slim strip above the hero",
+          "example": "FREE SHIPPING on orders $99+ | FREE Jersey Assurance on all jerseys"
+        },
+        "promo-bar": {
+          "type": "text",
+          "selector": "[data-nb-space='promo-bar']",
+          "description": "Supporting copy centred in the hero below the headline",
+          "example": "Get the same jerseys the players wear on the field. Officially licensed, shipped free."
+        },
+        "hero-image": {
+          "type": "image",
+          "selector": "[data-nb-space='hero-image']",
+          "description": "Full-viewport background image behind the hero content",
+          "example": "Team action shot, stadium photo, or player celebration"
+        },
+        "hero-headline": {
+          "type": "text",
+          "selector": "[data-nb-space='hero-headline']",
+          "description": "Large centred headline (56px) over the hero image",
+          "example": "Wear What They Wear"
+        },
+        "hero-subheadline": {
+          "type": "text",
+          "selector": "[data-nb-space='hero-subheadline']",
+          "description": "Eyebrow text above the headline",
+          "example": "San Francisco Giants · Official Nike Jerseys"
+        },
+        "hero-cta": {
+          "type": "text",
+          "selector": "[data-nb-space='hero-cta']",
+          "description": "CTA button text centred in the hero",
+          "example": "Shop Now"
+        }
+      }
+    },
+    "full-surround": {
+      "id": "full-surround",
+      "name": "Template B — Full Surround",
+      "description": "Dark-themed top section with countdown timer and live activity ticker. Dense messaging at every scroll position — urgency bars, callout banners, aggregate review bars, stacked trust. Hard conversion feel.",
+      "file": "/pages/template-b-full-surround.html",
+      "spaces": {
+        "top-banner": {
+          "type": "text",
+          "selector": "[data-nb-space='top-banner']",
+          "description": "Blue animated banner at the very top",
+          "example": "FREE SHIPPING on orders $99+ | FREE Jersey Assurance on all jerseys"
+        },
+        "countdown": {
+          "type": "text",
+          "selector": "[data-nb-space='countdown']",
+          "description": "Countdown timer strip below the dark header — counts down to an event or deadline",
+          "example": "Giants vs. Dodgers — Game Day In: 11d 04h 32m"
+        },
+        "promo-bar": {
+          "type": "text",
+          "selector": "[data-nb-space='promo-bar']",
+          "description": "Yellow high-contrast social proof bar",
+          "example": "12,847 sold this season — 97% of fans recommend"
+        },
+        "hero-image": {
+          "type": "image",
+          "selector": "[data-nb-space='hero-image']",
+          "description": "Small image in the compact horizontal hero card",
+          "example": "Team photo or player action shot"
+        },
+        "hero-headline": {
+          "type": "text",
+          "selector": "[data-nb-space='hero-headline']",
+          "description": "Headline in the compact hero card",
+          "example": "Wear What They Wear"
+        },
+        "hero-subheadline": {
+          "type": "text",
+          "selector": "[data-nb-space='hero-subheadline']",
+          "description": "Eyebrow text in the compact hero card",
+          "example": "San Francisco Giants"
+        },
+        "hero-cta": {
+          "type": "text",
+          "selector": "[data-nb-space='hero-cta']",
+          "description": "CTA button in the compact hero card",
+          "example": "Shop Now"
+        },
+        "badge": {
+          "type": "text",
+          "selector": "[data-nb-space='badge']",
+          "description": "Floating label overlaid on the product image",
+          "example": "97% Recommend / 12,847 sold this season"
+        },
+        "ticker": {
+          "type": "text",
+          "selector": "[data-nb-space='ticker']",
+          "description": "Scrolling live activity feed in the PDP info column",
+          "example": "Mike in SF bought this 3 min ago | 23 people viewing right now | Only 8 left in size M"
+        },
+        "pdp-cta": {
+          "type": "text",
+          "selector": "[data-nb-space='pdp-cta']",
+          "description": "Main add-to-cart button text",
+          "example": "Add to Cart — $174.99"
+        },
+        "callout-1": {
+          "type": "text",
+          "selector": "[data-nb-space='callout-1']",
+          "description": "Inline banner between PDP and product grid",
+          "example": "Giants vs. Dodgers — Apr 8-10 at Oracle Park. Get game-day ready."
+        },
+        "grid-headline": {
+          "type": "text",
+          "selector": "[data-nb-space='grid-headline']",
+          "description": "Title above the product grid",
+          "example": "More Chapman #26 Styles"
+        },
+        "callout-2": {
+          "type": "text",
+          "selector": "[data-nb-space='callout-2']",
+          "description": "Inline banner between product grid and reviews",
+          "example": "Bundle & Save: Add a cap (+$34.99) and get free shipping"
+        },
+        "reviews-headline": {
+          "type": "text",
+          "selector": "[data-nb-space='reviews-headline']",
+          "description": "Reviews section heading above the aggregate star bar",
+          "example": "What Fans Say About Chapman Jerseys"
+        },
+        "trust-bar": {
+          "type": "text",
+          "selector": "[data-nb-space='trust-bar']",
+          "description": "Four-column trust bar with icons, labels, and descriptions",
+          "example": "✓ Official MLB Licensed | 🚚 Free Shipping $99+ | ↩️ 365-Day Returns | 🔒 Secure Checkout"
+        }
+      }
+    }
+  }
+}

@@ -3,245 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Philadelphia Eagles Jerseys | Fanatics</title>
 <link rel="stylesheet" href="/pages/nb-shared.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  /* Eagles team page — full green theme */
-  body { background: #004C54; }
-  .nb-banner { background: #003a40; }
-
-  .eagles-promo { background: #003a40; color: #fff; text-align: center; padding: 8px 16px; font-size: 12px; font-weight: 500; }
-  .eagles-promo strong { font-weight: 700; }
-  .eagles-header { background: #002a2f; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 52px; }
-  .eagles-header-logo { height: 24px; }
-  .eagles-header-nav { display: flex; align-items: center; gap: 24px; font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 500; }
-  .eagles-header-nav .active { color: #fff; font-weight: 700; }
-
-  .eagles-team-bar { background: linear-gradient(135deg, #004C54 0%, #003a40 50%, #0a2e33 100%); padding: 28px 0; }
-  .eagles-team-bar-inner { max-width: 1400px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
-  .eagles-team-info { display: flex; align-items: center; gap: 20px; }
-  .eagles-team-logo { width: 64px; height: 64px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 800; color: #A5ACAF; }
-  .eagles-team-text h1 { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin-bottom: 2px; }
-  .eagles-team-text p { font-size: 13px; color: rgba(255,255,255,0.6); }
-  .eagles-team-stats { display: flex; gap: 12px; }
-  .eagles-team-stat { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 16px; text-align: center; }
-  .eagles-team-stat-val { font-size: 20px; font-weight: 800; color: #fff; }
-  .eagles-team-stat-label { font-size: 10px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; margin-top: 2px; }
-
-
-  .eagles-browsing-tag { display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; border: 1px solid #86efac; border-radius: 6px; padding: 6px 12px; font-size: 11px; font-weight: 600; color: #166534; margin-bottom: 12px; }
-
-  /* Override everything to Eagles dark green theme */
-  .eagles-cta { background: #A5ACAF !important; color: #000 !important; }
-  .eagles-cta:hover { background: #bfc5c8 !important; }
-  .eagles-chip-active { border-color: #A5ACAF !important; color: #fff !important; background: rgba(165,172,175,0.15) !important; }
-
-  /* PDP overrides */
-  .nb-pdp { background: rgba(0,0,0,0.15); border-radius: 0; }
-  .nb-pdp-images { padding: 24px 24px 24px 0; }
-  .nb-pdp-main-img { background: rgba(255,255,255,0.95) !important; border-radius: 8px; }
-  .nb-pdp-thumbs img { background: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.2); }
-  .nb-pdp-thumbs img.active { border-color: #A5ACAF; }
-  .nb-pdp-info { border-left-color: rgba(255,255,255,0.08); }
-  .nb-pdp-brand { color: rgba(255,255,255,0.5); }
-  .nb-pdp-title { color: #fff; }
-  .nb-pdp-rating { color: rgba(255,255,255,0.6); }
-  .nb-pdp-rating .stars { color: #A5ACAF; }
-  .nb-pdp-price { color: #fff; }
-  .nb-pdp-affirm { color: rgba(255,255,255,0.5); }
-  .nb-pdp-affirm strong { color: rgba(255,255,255,0.7); }
-  .nb-pdp-shipping { color: #86efac; }
-  .nb-pdp-players-label { color: rgba(255,255,255,0.5); }
-  .nb-pdp-player-chip { border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.5); background: transparent; }
-  .nb-pdp-size-label { color: rgba(255,255,255,0.6); }
-  .nb-pdp-size-chart { color: #A5ACAF; }
-  .nb-pdp-size-btn { border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.5); background: transparent; }
-  .nb-pdp-size-btn.active { border-color: #A5ACAF; color: #fff; background: rgba(255,255,255,0.08); }
-  .nb-pdp-size-btn:hover { border-color: rgba(255,255,255,0.3); }
-  .nb-cta-secondary { color: #fff; border-color: rgba(255,255,255,0.2); }
-  .nb-pdp-details { border-top-color: rgba(255,255,255,0.08); }
-  .nb-pdp-detail-row { border-bottom-color: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); }
-  .nb-pdp-detail-row span:first-child { color: rgba(255,255,255,0.4); }
-  .nb-pdp-detail-row span:last-child { color: rgba(255,255,255,0.7); }
-
-  /* Sections */
-  .nb-section { border-top-color: rgba(255,255,255,0.08); }
-  .nb-section-title { color: #fff; }
-  .nb-section-sub { color: rgba(255,255,255,0.4); }
-
-  /* Product cards */
-  .nb-product-card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08); }
-  .nb-product-card:hover { border-color: rgba(255,255,255,0.15); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-  .nb-product-card-img { background: rgba(255,255,255,0.92) !important; }
-  .nb-product-card-name { color: rgba(255,255,255,0.7); }
-  .nb-product-card-price { color: #fff; }
-  .nb-product-card-shipping { color: #86efac; }
-
-  /* Reviews */
-  .nb-reviews { border-top-color: rgba(255,255,255,0.08); background: rgba(0,0,0,0.1); }
-  .nb-review-item { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.08); }
-  .nb-review-stars { color: #A5ACAF; }
-  .nb-review-text { color: rgba(255,255,255,0.6); }
-  .nb-review-author { color: rgba(255,255,255,0.3); }
-
-  /* Trust bar */
-  .nb-trust { background: rgba(0,0,0,0.15); border-top-color: rgba(255,255,255,0.06); }
-  .nb-trust-item { color: rgba(255,255,255,0.5); }
-
-  /* Browsing tag on dark bg */
-  .eagles-browsing-tag { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #86efac; }
-
-  /* Listing overrides for dark bg */
-  .nb-listing-filters { border-right-color: rgba(255,255,255,0.1); }
-  .nb-filter-title { color: #fff !important; border-bottom-color: rgba(255,255,255,0.15); }
-  .nb-filter-item { color: #fff !important; }
-  .nb-filter-item span { color: rgba(255,255,255,0.85) !important; }
-  .nb-filter-item .count { color: rgba(255,255,255,0.45) !important; }
-  .nb-listing-title { color: #fff; }
-  .nb-listing-count { color: rgba(255,255,255,0.4); }
-  .nb-listing-sort { color: rgba(255,255,255,0.4); }
-  .nb-listing-sort strong { color: #fff; }
-
-  /* Footer stays dark */
-  .nb-footer { background: #002a2f; }
-</style>
 </head>
 <body>
-
-<div class="nb-banner">Personalised by Neon Blue — Die-Hard Fan</div>
-
-<!-- Eagles-styled promo bar -->
-<div class="eagles-promo"><strong>FREE SHIPPING</strong> on all Eagles gear $99+ | <strong>FREE Jersey Assurance</strong> on every jersey</div>
-
-<!-- Dark header (Fanatics team page style) -->
-<div class="eagles-header">
-  <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/fanatics.svg" alt="Fanatics" class="eagles-header-logo" style="filter:brightness(0) invert(1)">
-  <div class="eagles-header-nav">
-    <span>MLB</span>
-    <span>NFL</span>
-    <span>NBA</span>
-    <span>NHL</span>
-    <span>Soccer</span>
-    <span style="font-size:18px">🔍</span>
-    <span style="font-size:18px">🛒</span>
-  </div>
+<div class="nb-banner">Personalised by Neon Blue — Die-Hard Fan Persona</div>
+<div class="nb-promo-bar"><strong>FREE SHIPPING</strong> on orders $99+ | <strong>FREE Jersey Assurance</strong> on all jerseys</div>
+<div class="nb-header">
+  <div class="nb-logo"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/fanatics.svg" alt="Fanatics" style="height:24px"></div>
+  <div class="nb-nav"><span>MLB</span><span>NFL</span><span>NBA</span><span>NHL</span><span>Soccer</span><span style="font-size:18px">🔍</span><span style="font-size:18px">🛒</span></div>
 </div>
+<div class="nb-subnav">
+  <span>Philadelphia Eagles</span>
+  <span class="active">Jerseys</span>
+  <span>Hats</span>
+  <span>T-Shirts</span>
+  <span>Hoodies</span>
+  <span>Accessories</span>
+</div>
+<div class="nb-breadcrumb">Home / NFL / Philadelphia Eagles / Jerseys / <span>Jalen Hurts #1</span></div>
 
-<!-- Eagles team hero bar -->
-<div class="eagles-team-bar">
-  <div class="eagles-team-bar-inner">
-    <div class="eagles-team-info">
-      <div class="eagles-team-logo">🦅</div>
-      <div class="eagles-team-text">
-        <h1>Philadelphia Eagles</h1>
-        <p>2025 NFL Season · Lincoln Financial Field</p>
-      </div>
-    </div>
-    <div class="eagles-team-stats">
-      <div class="eagles-team-stat">
-        <div class="eagles-team-stat-val">12-5</div>
-        <div class="eagles-team-stat-label">Record</div>
-      </div>
-      <div class="eagles-team-stat">
-        <div class="eagles-team-stat-val">#1</div>
-        <div class="eagles-team-stat-label">NFC East</div>
-      </div>
-      <div class="eagles-team-stat">
-        <div class="eagles-team-stat-val">✓</div>
-        <div class="eagles-team-stat-label">Playoffs</div>
-      </div>
+<div style="max-width:1400px;margin:0 auto;padding:0 24px">
+  <div style="position:relative;border-radius:8px;overflow:hidden">
+    <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/philadelphiaeagles.png" alt="Philadelphia Eagles" style="width:100%;display:block;max-height:340px;object-fit:cover">
+    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:32px 28px 24px">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.6);margin-bottom:6px">Philadelphia Eagles · Detected: Your Team</div>
+      <div style="font-size:32px;font-weight:800;color:#fff;margin-bottom:12px">Your Team. Your Jersey.</div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:16px">Official Nike Eagles jerseys for the die-hard fan.</div>
+      <button style="padding:10px 24px;background:#004c54;color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Shop Eagles</button>
     </div>
   </div>
 </div>
 
-
-<!-- Listing layout -->
-<div class="nb-listing">
-  <div class="nb-listing-filters">
-    <div class="eagles-browsing-tag" style="margin-bottom:16px">✦ Based on your location: Philadelphia</div>
-    <div class="nb-filter-group">
-      <div class="nb-filter-title">Player</div>
-      <div class="nb-filter-item"><input type="checkbox" checked> <span style="font-weight:600">Jalen Hurts</span> <span class="count">24</span></div>
-      <div class="nb-filter-item"><input type="checkbox" checked> <span style="font-weight:600">Cooper DeJean</span> <span class="count">12</span></div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>DeVonta Smith</span> <span class="count">18</span></div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>Darius Slay</span> <span class="count">14</span></div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>A.J. Brown</span> <span class="count">16</span></div>
+<div class="nb-pdp">
+  <div class="nb-pdp-images">
+    <div class="nb-pdp-main-img">
+      <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/hurts_vapor_black" alt="Jalen Hurts #1 Vapor F.U.S.E. Limited Jersey - Black">
     </div>
-    <div class="nb-filter-group">
-      <div class="nb-filter-title">Jersey Type</div>
-      <div class="nb-filter-item"><input type="checkbox" checked> <span style="font-weight:600">Vapor F.U.S.E.</span> <span class="count">18</span></div>
-      <div class="nb-filter-item"><input type="checkbox" checked> <span style="font-weight:600">Game</span> <span class="count">42</span></div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>Fashion</span> <span class="count">8</span></div>
+    <div class="nb-pdp-thumbs">
+      <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/hurts_vapor_black" alt="Black Vapor" class="active">
+      <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/hurts_kelly_green" alt="Kelly Green">
+      <img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/eagles_hurts_green" alt="Midnight Green">
     </div>
-    <div class="nb-filter-group">
-      <div class="nb-filter-title">Price</div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>Under $150</span> <span class="count">42</span></div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>$150 - $199</span> <span class="count">18</span></div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>$200+</span> <span class="count">6</span></div>
-    </div>
-    <div class="nb-filter-group">
-      <div class="nb-filter-title">Gender</div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>Men</span> <span class="count">38</span></div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>Women</span> <span class="count">22</span></div>
-      <div class="nb-filter-item"><input type="checkbox"> <span>Youth</span> <span class="count">12</span></div>
-    </div>
+    <div class="nb-nb-badge">Neon Blue</div>
   </div>
 
-  <div class="nb-listing-main">
-    <div class="nb-listing-header">
-      <div><div class="nb-listing-title">Philadelphia Eagles Jerseys</div><div class="nb-listing-count">1 - 12 of 66 Results</div></div>
-      <div class="nb-listing-sort">Sort by: <strong>Most Popular</strong> ▾</div>
+  <div class="nb-pdp-info">
+    <div class="nb-pdp-brand">Nike · Philadelphia Eagles</div>
+    <div class="nb-pdp-title">Jalen Hurts Philadelphia Eagles Nike Vapor F.U.S.E. Limited Jersey - Black</div>
+    <div class="nb-pdp-rating">
+      <span class="stars">★★★★★</span>
+      <span>4.8 (1,204 reviews)</span>
+    </div>
+    <div class="nb-pdp-price">$174.99</div>
+    <div class="nb-pdp-affirm">or 4 interest-free payments of <strong>$43.75</strong> with Afterpay</div>
+    <div class="nb-pdp-shipping">✓ FREE Shipping &nbsp;|&nbsp; FREE Jersey Assurance</div>
+
+    <div class="nb-pdp-players">
+      <div class="nb-pdp-players-label">Player</div>
+      <div class="nb-pdp-player-chips">
+        <div class="nb-pdp-player-chip active">Jalen Hurts #1</div>
+        <div class="nb-pdp-player-chip">AJ Brown #11</div>
+        <div class="nb-pdp-player-chip">DeVonta Smith #6</div>
+        <div class="nb-pdp-player-chip">Blank / Custom</div>
+      </div>
     </div>
 
-    <div class="nb-product-grid">
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/hurts_vapor_black"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(165,172,175,0.15);color:#A5ACAF">#1 Eagles Jersey</div><div class="nb-product-card-name">Jalen Hurts Eagles Nike Vapor F.U.S.E. Limited - Black</div><div class="nb-product-card-price">$174.99</div><div class="nb-product-card-shipping">Ships Free · Jersey Assurance</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/hurts_kelly_green"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(165,172,175,0.15);color:#A5ACAF">Kelly Green</div><div class="nb-product-card-name">Jalen Hurts Eagles Nike Game Jersey - Kelly Green</div><div class="nb-product-card-price">$149.99</div><div class="nb-product-card-shipping">Ships Free · Jersey Assurance</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/eagles_hurts_green"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(165,172,175,0.15);color:#A5ACAF">Team Game</div><div class="nb-product-card-name">Jalen Hurts Eagles Nike Team Game - Midnight Green</div><div class="nb-product-card-price">$149.99</div><div class="nb-product-card-shipping">Ships Free · Jersey Assurance</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/dejean_eagles_green"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(0,200,100,0.12);color:#22c55e">New Arrival</div><div class="nb-product-card-name">Cooper DeJean Eagles Nike Alternate Game - Kelly Green</div><div class="nb-product-card-price">$149.99</div><div class="nb-product-card-shipping">Ships Free · Jersey Assurance</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/mahomes_vapor_fuse_red"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(220,38,38,0.1);color:#dc2626">Chiefs · Oct 12</div><div class="nb-product-card-name">Patrick Mahomes Chiefs Vapor F.U.S.E. - Red</div><div class="nb-product-card-price">$174.99</div><div class="nb-product-card-shipping">Ships Free</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/cowboys_prescott_vapor"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(29,78,216,0.1);color:#1d4ed8">Cowboys · Oct 12</div><div class="nb-product-card-name">Dak Prescott Cowboys Vapor F.U.S.E. - Navy</div><div class="nb-product-card-price">$174.99</div><div class="nb-product-card-shipping">Ships Free</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/allen_game_royal"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(29,78,216,0.1);color:#1d4ed8">Bills · Nov 16</div><div class="nb-product-card-name">Josh Allen Bills Nike Team Game - Royal</div><div class="nb-product-card-price">$149.99</div><div class="nb-product-card-shipping">Ships Free</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/purdy_game_scarlet"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(220,38,38,0.1);color:#dc2626">49ers · Dec 7</div><div class="nb-product-card-name">Brock Purdy 49ers Nike Game - Scarlet</div><div class="nb-product-card-price">$149.99</div><div class="nb-product-card-shipping">Ships Free</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/prescott_alternate_white"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(29,78,216,0.1);color:#1d4ed8">Alternate</div><div class="nb-product-card-name">Dak Prescott Cowboys Alternate Game - White</div><div class="nb-product-card-price">$149.99</div><div class="nb-product-card-shipping">Ships Free</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/mahomes_nike_game_red"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(220,38,38,0.1);color:#dc2626">Chiefs</div><div class="nb-product-card-name">Patrick Mahomes Chiefs Nike Game - Red</div><div class="nb-product-card-price">$149.99</div><div class="nb-product-card-shipping">Ships Free</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/allen_rivalries_white"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(124,58,237,0.1);color:#7c3aed">Rivalries</div><div class="nb-product-card-name">Josh Allen Bills Rivalries Limited - White</div><div class="nb-product-card-price">$224.99</div><div class="nb-product-card-shipping">Ships Free</div></div></div>
-      <div class="nb-product-card"><div class="nb-product-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/purdy_fashion_tundra"></div><div class="nb-product-card-body"><div class="nb-product-card-badge" style="background:rgba(194,65,12,0.1);color:#c2410c">Fashion</div><div class="nb-product-card-name">Brock Purdy 49ers Fashion Game - Tundra White</div><div class="nb-product-card-price">$129.99</div><div class="nb-product-card-shipping">Ships Free</div></div></div>
+    <div class="nb-pdp-size">
+      <div class="nb-pdp-size-header">
+        <div class="nb-pdp-size-label">Size</div>
+        <div class="nb-pdp-size-chart">Size Chart</div>
+      </div>
+      <div class="nb-pdp-sizes">
+        <div class="nb-pdp-size-btn">S</div>
+        <div class="nb-pdp-size-btn">M</div>
+        <div class="nb-pdp-size-btn active">L</div>
+        <div class="nb-pdp-size-btn">XL</div>
+        <div class="nb-pdp-size-btn">2XL</div>
+        <div class="nb-pdp-size-btn">3XL</div>
+      </div>
+    </div>
+
+    <button class="nb-cta-btn">Get Your Hurts #1 Jersey</button>
+    <button class="nb-cta-secondary">Compare All Eagles Jerseys</button>
+
+    <div class="nb-pdp-details">
+      <div class="nb-pdp-detail-row"><span>Brand</span><span>Nike</span></div>
+      <div class="nb-pdp-detail-row"><span>Type</span><span>Vapor F.U.S.E. Limited</span></div>
+      <div class="nb-pdp-detail-row"><span>Color</span><span>Black</span></div>
+      <div class="nb-pdp-detail-row"><span>Material</span><span>100% Polyester</span></div>
+      <div class="nb-pdp-detail-row"><span>Officially Licensed</span><span>NFL · Nike</span></div>
     </div>
   </div>
 </div>
 
-<!-- Upcoming schedule -->
 <div class="nb-section">
-  <div class="nb-section-title">Upcoming Schedule</div>
-  <div class="nb-section-sub">Get your jersey before game day</div>
-  <div style="display:flex;gap:12px;flex-wrap:wrap">
-    <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px">
-      <div style="font-size:24px">🏈</div>
-      <div><div style="font-size:13px;font-weight:700;color:#fff">vs. Cowboys</div><div style="font-size:11px;color:rgba(255,255,255,0.4)">Sun, Oct 12 · Home</div></div>
-    </div>
-    <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px">
-      <div style="font-size:24px">🏈</div>
-      <div><div style="font-size:13px;font-weight:700;color:#fff">vs. Chiefs</div><div style="font-size:11px;color:rgba(255,255,255,0.4)">Sun, Nov 2 · Away</div></div>
-    </div>
-    <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px">
-      <div style="font-size:24px">🏈</div>
-      <div><div style="font-size:13px;font-weight:700;color:#fff">vs. Bills</div><div style="font-size:11px;color:rgba(255,255,255,0.4)">Sun, Nov 16 · Home</div></div>
-    </div>
-    <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px 16px;display:flex;align-items:center;gap:12px">
-      <div style="font-size:24px">🏈</div>
-      <div><div style="font-size:13px;font-weight:700;color:#fff">vs. 49ers</div><div style="font-size:11px;color:rgba(255,255,255,0.4)">Sun, Dec 7 · Away</div></div>
-    </div>
+  <div class="nb-section-title">More Eagles Jerseys</div>
+  <div class="nb-section-sub">Top Eagles players — premium and game jerseys</div>
+  <div class="nb-grid">
+    <div class="nb-card"><div class="nb-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/hurts_vapor_black" alt="Hurts Vapor Black" style="width:100%;height:100%;object-fit:contain;padding:8px;background:#f8f8f8"></div><div class="nb-card-body"><div class="nb-card-badge" style="background:#fde8e8;color:#c0392b">#1 Seller</div><div class="nb-card-name">Jalen Hurts Vapor F.U.S.E. Limited - Black</div><div class="nb-card-price">$174.99</div><div class="nb-card-review">★★★★★ 1,204 reviews · Ships Free</div></div></div>
+    <div class="nb-card"><div class="nb-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/hurts_kelly_green" alt="Hurts Kelly Green" style="width:100%;height:100%;object-fit:contain;padding:8px;background:#f8f8f8"></div><div class="nb-card-body"><div class="nb-card-badge" style="background:#e8f5e9;color:#2e7d32">Kelly Green</div><div class="nb-card-name">Jalen Hurts Game Jersey - Kelly Green</div><div class="nb-card-price">$149.99</div><div class="nb-card-review">★★★★★ 1,204 reviews · Ships Free</div></div></div>
+    <div class="nb-card"><div class="nb-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/eagles_hurts_green" alt="Hurts Midnight Green" style="width:100%;height:100%;object-fit:contain;padding:8px;background:#f8f8f8"></div><div class="nb-card-body"><div class="nb-card-badge" style="background:#dbeafe;color:#1d4ed8">Team Game</div><div class="nb-card-name">Jalen Hurts Team Game - Midnight Green</div><div class="nb-card-price">$149.99</div><div class="nb-card-review">★★★★★ 1,204 reviews · Ships Free</div></div></div>
+    <div class="nb-card"><div class="nb-card-img"><img src="https://ik.imagekit.io/n9gkzdkufg/Fanatics/dejean_eagles_green" alt="DeJean Kelly Green" style="width:100%;height:100%;object-fit:contain;padding:8px;background:#f8f8f8"></div><div class="nb-card-body"><div class="nb-card-badge" style="background:#e8f5e9;color:#2e7d32">New Arrival</div><div class="nb-card-name">Cooper DeJean Alternate Game - Kelly Green</div><div class="nb-card-price">$149.99</div><div class="nb-card-review">★★★★★ 1,204 reviews · Ships Free</div></div></div>
   </div>
 </div>
 
-<!-- Eagles fan reviews -->
 <div class="nb-reviews">
-  <div class="nb-section-title">What Eagles Fans Are Saying</div>
-  <div class="nb-section-sub" style="color:#888">Reviews from verified Eagles jersey buyers</div>
-  <div class="nb-review-item"><div class="nb-review-stars">★★★★★</div><div class="nb-review-text">"The Vapor F.U.S.E. in black is the cleanest jersey I own. Wore it to the Cowboys game at the Linc and got nothing but love. Stitching is perfect."</div><div class="nb-review-author">— BirdGang_JH1, Verified Purchase · Jalen Hurts Jersey</div></div>
-  <div class="nb-review-item"><div class="nb-review-stars">★★★★★</div><div class="nb-review-text">"Bought the Kelly Green for my dad's birthday — he literally teared up. The color is incredible in person. True to size."</div><div class="nb-review-author">— PhillyForever22, Verified Purchase · Jalen Hurts Jersey</div></div>
-  <div class="nb-review-item"><div class="nb-review-stars">★★★★★</div><div class="nb-review-text">"Third Eagles jersey from Fanatics. The Vapor quality is worth the upgrade from the Game tier. Go Birds."</div><div class="nb-review-author">— EaglesNation_215, Verified Purchase · Jalen Hurts Jersey</div></div>
+  <div class="nb-section-title">What Eagles Fans Say</div>
+  <div class="nb-section-sub">Reviews filtered to Eagles jerseys</div>
+  <div class="nb-review-item"><div class="nb-review-stars">★★★★★</div><div class="nb-review-text">"The black Vapor is unreal — the stitching quality is next level. Wore it to the Linc and got so many compliments."</div><div class="nb-review-author">— EaglesNation_215, Verified Purchase</div></div>
+  <div class="nb-review-item"><div class="nb-review-stars">★★★★★</div><div class="nb-review-text">"Third Eagles jersey from Fanatics. Always consistent quality and fast shipping to Philly."</div><div class="nb-review-author">— FlyEaglesFly22, Verified Purchase</div></div>
 </div>
 
 <div class="nb-trust">
@@ -251,6 +122,23 @@
   <div class="nb-trust-item"><span class="nb-trust-icon">🔒</span> Secure Checkout</div>
 </div>
 
-<footer class="nb-footer"><div class="nb-footer-main"><div class="nb-footer-columns"><div class="nb-footer-col"><div class="nb-footer-col-title">Customer Service</div><ul><li><a>Contact Us</a></li><li><a>Help</a></li><li><a>Track My Order</a></li><li><a>Shipping</a></li><li><a>Size Chart</a></li><li><a>Gift Cards</a></li><li><a>Zip</a></li><li><a>Affirm</a></li></ul></div><div class="nb-footer-col"><div class="nb-footer-col-title">Worry Free Shopping</div><ul><li><a>Promo Terms and Exclusions</a></li><li><a>365-Day Returns</a></li><li><a>Fanatics MVP</a></li><li><a>Fanatics MVP Card</a></li><li><a>FanCash</a></li><li><a>Authenticity Verification</a></li></ul></div><div class="nb-footer-col"><div class="nb-footer-col-title">Information</div><ul><li><a>About Us</a></li><li><a>Affiliate Program</a></li><li><a>Fanatics App</a></li><li><a>Rewards</a></li><li><a>Fanatics Live</a></li><li><a>Fanatics Fest NYC</a></li><li><a>Corporate Info</a></li><li><a>Careers</a></li><li><a>Volume Sales</a></li></ul></div></div><div class="nb-footer-right"><div class="nb-footer-signup"><p>Stay updated on sales, new items and more.</p><button class="nb-footer-signup-btn">SIGN UP & SAVE!</button></div><div><div class="nb-footer-social-title">Follow Us</div><div class="nb-footer-social"><a>f</a><a>▶</a><a>𝕏</a><a>📷</a><a>📌</a></div></div><div><div class="nb-footer-app-title">Get the App</div><div class="nb-footer-app-badges"><div class="nb-footer-app-badge">App Store</div><div class="nb-footer-app-badge">Google Play</div></div></div></div></div><div class="nb-footer-bottom"><div class="nb-footer-legal"><a>Privacy Policy</a><a>Do Not Sell / Share My Personal Information</a><a>Accessibility</a><a>Terms of Use</a><a>Interest-Based Advertising</a><a>Product Concerns</a></div><div class="nb-footer-copyright">© Fanatics, LLC., 2026. All Rights Reserved.</div></div></footer>
+<footer class="nb-footer">
+  <div class="nb-footer-main">
+    <div class="nb-footer-columns">
+      <div class="nb-footer-col"><div class="nb-footer-col-title">Customer Service</div><ul><li><a>Contact Us</a></li><li><a>Help</a></li><li><a>Track My Order</a></li><li><a>Shipping</a></li><li><a>Size Chart</a></li><li><a>Gift Cards</a></li><li><a>Zip</a></li><li><a>Affirm</a></li></ul></div>
+      <div class="nb-footer-col"><div class="nb-footer-col-title">Worry Free Shopping</div><ul><li><a>Promo Terms and Exclusions</a></li><li><a>365-Day Returns</a></li><li><a>Fanatics MVP</a></li><li><a>Fanatics MVP Card</a></li><li><a>FanCash</a></li><li><a>Authenticity Verification</a></li></ul></div>
+      <div class="nb-footer-col"><div class="nb-footer-col-title">Information</div><ul><li><a>About Us</a></li><li><a>Affiliate Program</a></li><li><a>Fanatics App</a></li><li><a>Rewards</a></li><li><a>Fanatics Live</a></li><li><a>Fanatics Fest NYC</a></li><li><a>Corporate Info</a></li><li><a>Careers</a></li><li><a>Volume Sales</a></li></ul></div>
+    </div>
+    <div class="nb-footer-right">
+      <div class="nb-footer-signup"><p>Stay updated on sales, new items and more.</p><button class="nb-footer-signup-btn">SIGN UP & SAVE!</button></div>
+      <div><div class="nb-footer-social-title">Follow Us</div><div class="nb-footer-social"><a>f</a><a>▶</a><a>𝕏</a><a>📷</a><a>📌</a></div></div>
+      <div><div class="nb-footer-app-title">Get the App</div><div class="nb-footer-app-badges"><div class="nb-footer-app-badge">App Store</div><div class="nb-footer-app-badge">Google Play</div></div></div>
+    </div>
+  </div>
+  <div class="nb-footer-bottom">
+    <div class="nb-footer-legal"><a>Privacy Policy</a><a>Do Not Sell / Share My Personal Information</a><a>Accessibility</a><a>Terms of Use</a><a>Interest-Based Advertising</a><a>Product Concerns</a></div>
+    <div class="nb-footer-copyright">© Fanatics, LLC., 2026. All Rights Reserved. No portion of this site may be reproduced or duplicated without the express permission of Fanatics, LLC.</div>
+  </div>
+</footer>
 </body>
 </html>
